@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.GPSTracker.DeviceGateway", "JT808.GPSTracker.DeviceGateway\JT808.GPSTracker.DeviceGateway.csproj", "{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75604DD7-7C35-49AF-9352-EBE1C8C55234}
+	EndGlobalSection
+EndGlobal
