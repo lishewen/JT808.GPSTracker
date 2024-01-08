@@ -38,4 +38,4 @@ using IHost host = Host.CreateDefaultBuilder(args)
     .UseConsoleLifetime()
     .Build();
 
-await host.StartAsync();
+await host.RunAsync();
