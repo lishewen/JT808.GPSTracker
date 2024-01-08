@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GPSTracker.Common
+namespace JT808.GPSTracker.Common
 {
     public interface IDeviceGrain : IGrainWithStringKey
     {
