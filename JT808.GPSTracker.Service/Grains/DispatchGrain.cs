@@ -12,7 +12,7 @@ namespace JT808.GPSTracker.Service.Grains
 {
     public class DispatchGrain(IDistributedCache distributedCache) : Grain, IDispatchGrain
     {
-        private readonly Dictionary<string, VelocityMessage> _buses = [];
+        private readonly Dictionary<int, VelocityMessage> _buses = [];
         public async ValueTask<List<VelocityMessage>> GetAllRunPoint()
         {
             string key = "AllRunPoint";

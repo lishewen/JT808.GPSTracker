@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace JT808.GPSTracker.Common
 {
-    public interface IDeviceGrain : IGrainWithStringKey
+    public interface IDeviceGrain : IGrainWithIntegerKey
     {
-        ValueTask ProcessMessage(VelocityMessage message);
+        ValueTask ProcessMessage(DeviceMessage message);
     }
 }

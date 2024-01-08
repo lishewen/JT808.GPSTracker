@@ -10,7 +10,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         Configuration = hostContext.Configuration;
         services.AddStackExchangeRedisCache(options =>
         {
-            options.Configuration = Configuration.GetConnectionString("RedisConnection");
+            options.ConfigurationOptions = ConfigurationOptions.Parse(hostContext.Configuration.GetConnectionString("RedisConnection"));
             options.ConfigurationOptions.DefaultDatabase = 2;
             options.InstanceName = "BusCache";
         });

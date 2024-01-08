@@ -11,6 +11,6 @@ namespace JT808.GPSTracker.Common
         double Latitude,
         double Longitude,
         long MessageId,
-        string DeviceId,
+        int DeviceId,
         DateTime Timestamp);
 }
