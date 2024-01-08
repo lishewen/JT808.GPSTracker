@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace JT808.GPSTracker.Common
 {
-    public interface IDeviceGrain : IGrainWithStringKey
+    public interface IDispatchGrain : IGrainWithGuidKey
     {
-        ValueTask ProcessMessage(VelocityMessage message);
+        ValueTask Post(VelocityMessage message);
+        ValueTask<List<VelocityMessage>> GetAllRunPoint();
     }
 }

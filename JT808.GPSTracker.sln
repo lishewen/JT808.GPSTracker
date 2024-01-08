@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.GPSTracker.Consumer",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.Common", "JT808.GPSTracker.Common\JT808.GPSTracker.Common.csproj", "{6000154D-5826-4CA4-BE40-B1D798504DCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.GPSTracker.Service", "JT808.GPSTracker.Service\JT808.GPSTracker.Service.csproj", "{7E94F811-0FAA-4810-9AA0-4C8795D664A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6000154D-5826-4CA4-BE40-B1D798504DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6000154D-5826-4CA4-BE40-B1D798504DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6000154D-5826-4CA4-BE40-B1D798504DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
