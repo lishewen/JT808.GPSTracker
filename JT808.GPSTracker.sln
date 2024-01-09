@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.GPSTracker.DeviceGateway", "JT808.GPSTracker.DeviceGateway\JT808.GPSTracker.DeviceGateway.csproj", "{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.DeviceGateway", "JT808.GPSTracker.DeviceGateway\JT808.GPSTracker.DeviceGateway.csproj", "{4035A3A9-ED81-42E9-BECB-0A3D5BC9E3A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.GPSTracker.Consumer", "JT808.GPSTracker.Consumer\JT808.GPSTracker.Consumer.csproj", "{DF1F0345-5BED-4DE3-88B6-794439CC1B9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.Consumer", "JT808.GPSTracker.Consumer\JT808.GPSTracker.Consumer.csproj", "{DF1F0345-5BED-4DE3-88B6-794439CC1B9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.Common", "JT808.GPSTracker.Common\JT808.GPSTracker.Common.csproj", "{6000154D-5826-4CA4-BE40-B1D798504DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.GPSTracker.Service", "JT808.GPSTracker.Service\JT808.GPSTracker.Service.csproj", "{7E94F811-0FAA-4810-9AA0-4C8795D664A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.Service", "JT808.GPSTracker.Service\JT808.GPSTracker.Service.csproj", "{7E94F811-0FAA-4810-9AA0-4C8795D664A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.BlazorWeb", "JT808.GPSTracker.BlazorWeb\JT808.GPSTracker.BlazorWeb\JT808.GPSTracker.BlazorWeb.csproj", "{FEE470CE-01D7-422A-9B5A-39B022FAF0F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.GPSTracker.BlazorWeb.Client", "JT808.GPSTracker.BlazorWeb\JT808.GPSTracker.BlazorWeb.Client\JT808.GPSTracker.BlazorWeb.Client.csproj", "{2331E810-3103-499B-916B-C649284F1C0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E94F811-0FAA-4810-9AA0-4C8795D664A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE470CE-01D7-422A-9B5A-39B022FAF0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE470CE-01D7-422A-9B5A-39B022FAF0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE470CE-01D7-422A-9B5A-39B022FAF0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE470CE-01D7-422A-9B5A-39B022FAF0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2331E810-3103-499B-916B-C649284F1C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2331E810-3103-499B-916B-C649284F1C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2331E810-3103-499B-916B-C649284F1C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2331E810-3103-499B-916B-C649284F1C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

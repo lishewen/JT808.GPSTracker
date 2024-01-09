@@ -1,0 +1,49 @@
+﻿@page "/buspoint"
+@attribute [StreamRendering]
+@using JT808.GPSTracker.Common
+
+<PageTitle>BusPoint</PageTitle>
+
+<h1>BusPoint</h1>
+
+@if (messages == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>DeviceId</th>
+                <th>Date</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Velocity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in messages)
+            {
+                <tr>
+                    <td>@message.DeviceId</td>
+                    <td>@message.Timestamp.ToShortDateString()</td>
+                    <td>@message.Latitude</td>
+                    <td>@message.Longitude</td>
+                    <td>@message.Velocity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private VelocityMessage[]? messages;
+    [Inject]
+    private IClusterClient? client { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        var dispatch = client!.GetGrain<IDispatchGrain>(Guid.Empty);
+        messages = (await dispatch.GetAllRunPoint()).ToArray();
+    }
+}
