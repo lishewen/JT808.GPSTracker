@@ -1,6 +1,6 @@
 # JT808.GPSTracker
 ## 简介
-本项目是一个使用了.NET8 + Orleans + Redis + RabbitMQ + JT808协议的极简分布式GPS系统案例实现。部分参考了Orleans的GPSTracker Sample。
+本项目是一个使用了.NET8 + Orleans + Redis + RabbitMQ + JT808协议 + Blazor的极简分布式GPS系统案例实现。部分参考了Orleans的GPSTracker Sample。
 ## 运行
 1. 安装运行Redis服务
 2. 安装运行RabbitMQ服务
