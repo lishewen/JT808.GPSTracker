@@ -19,6 +19,7 @@ IHost host = Host.CreateDefaultBuilder(args)
     {
         var redisConnectionString = Configuration.GetConnectionString("RedisConnection");
         var ServerIP = Configuration.GetSection("Options:ServerIP").Value;
+        var GatewayPort = Configuration.GetSection("Options:GatewayPort").Value;
         bool ListenOnAnyHostAddress = Configuration.GetValue<bool>("Options:ListenOnAnyHostAddress");
         var orleansHost = builder.UseRedisClustering(options =>
         {
@@ -36,7 +37,7 @@ IHost host = Host.CreateDefaultBuilder(args)
             options.ClusterId = "JBBus.Orleans";
             options.ServiceId = "JBBus.Orleans";
         })
-        .ConfigureEndpoints(IPAddress.Parse(ServerIP), 11111, 30000, ListenOnAnyHostAddress);
+        .ConfigureEndpoints(IPAddress.Parse(ServerIP), 11111, int.Parse(GatewayPort), ListenOnAnyHostAddress);
     })
     .Build();
 
