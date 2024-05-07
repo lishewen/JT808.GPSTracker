@@ -4,7 +4,7 @@
 
 <PageTitle>BusPoint</PageTitle>
 
-<h1>BusPoint</h1>
+<h1>BusPoint(P:@PackageCount D:@DelayPackageCount A:@(((double)DelayPackageCount / PackageCount * 100).ToString("0.00"))% C:@messages?.Length)</h1>
 
 @if (messages == null)
 {
@@ -36,7 +36,7 @@ else
                     <td>@message.Velocity.ToString("0.00")</td>
                     <td>@message.PackageCount</td>
                     <td>@message.DelayPackageCount</td>
-                    <td>@((double)message.DelayPackageCount / message.PackageCount * 100)%</td>
+                    <td>@(((double)message.DelayPackageCount / message.PackageCount * 100).ToString("0.00"))%</td>
                 </tr>
             }
         </tbody>
@@ -44,6 +44,8 @@ else
 }
 
 @code {
+    private long PackageCount = 0;
+    private long DelayPackageCount = 0;
     private VelocityMessage[]? messages;
     [Inject]
     private IClusterClient? client { get; set; }
@@ -51,5 +53,7 @@ else
     {
         var dispatch = client!.GetGrain<IDispatchGrain>(Guid.Empty);
         messages = (await dispatch.GetAllRunPoint()).OrderBy(m => m.DeviceId).ToArray();
+        PackageCount = messages.Sum(m => m.PackageCount);
+        DelayPackageCount = messages.Sum(m => m.DelayPackageCount);
     }
 }
