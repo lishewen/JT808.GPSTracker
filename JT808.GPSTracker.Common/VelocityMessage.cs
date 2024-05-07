@@ -9,7 +9,9 @@ namespace JT808.GPSTracker.Common
     [Immutable, GenerateSerializer]
     public record VelocityMessage(
         DeviceMessage DeviceMessage,
-        double Velocity) :
+        double Velocity,
+        long PackageCount,
+        long DelayPackageCount) :
          DeviceMessage(
             DeviceMessage.Latitude,
             DeviceMessage.Longitude,

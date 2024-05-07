@@ -20,6 +20,9 @@ else
                 <th>Latitude</th>
                 <th>Longitude</th>
                 <th>Velocity</th>
+                <th>PackageCount</th>
+                <th>DelayPackageCount</th>
+                <th>数据包延迟率</th>
             </tr>
         </thead>
         <tbody>
@@ -27,10 +30,13 @@ else
             {
                 <tr>
                     <td>@message.DeviceId</td>
-                    <td>@message.Timestamp.ToShortDateString()</td>
+                    <td>@message.Timestamp.ToString("MM-dd HH:mm")</td>
                     <td>@message.Latitude</td>
                     <td>@message.Longitude</td>
-                    <td>@message.Velocity</td>
+                    <td>@message.Velocity.ToString("0.00")</td>
+                    <td>@message.PackageCount</td>
+                    <td>@message.DelayPackageCount</td>
+                    <td>@((double)message.DelayPackageCount / message.PackageCount * 100)%</td>
                 </tr>
             }
         </tbody>
@@ -44,6 +50,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         var dispatch = client!.GetGrain<IDispatchGrain>(Guid.Empty);
-        messages = (await dispatch.GetAllRunPoint()).ToArray();
+        messages = (await dispatch.GetAllRunPoint()).OrderBy(m => m.DeviceId).ToArray();
     }
 }

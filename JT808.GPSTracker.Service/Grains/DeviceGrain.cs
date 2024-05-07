@@ -12,6 +12,8 @@ namespace JT808.GPSTracker.Service.Grains
     public class DeviceGrain : Grain, IDeviceGrain
     {
         private DeviceMessage _lastMessage = null!;
+        private long PackageCount = 0;
+        private long DelayPackageCount = 0;
         private readonly IDispatchGrain _dispatcher;
         public DeviceGrain()
         {
@@ -19,7 +21,11 @@ namespace JT808.GPSTracker.Service.Grains
         }
         public async ValueTask ProcessMessage(DeviceMessage message)
         {
-
+            PackageCount++;
+            if (DateTime.Now - message.Timestamp > TimeSpan.FromMinutes(5))
+            {
+                DelayPackageCount++;
+            }
             if (_lastMessage is null || _lastMessage.Latitude != message.Latitude || _lastMessage.Longitude != message.Longitude)
             {
                 // Only sent a notification if the position has changed
@@ -29,7 +35,7 @@ namespace JT808.GPSTracker.Service.Grains
                 _lastMessage = message;
 
                 // Forward the message to the notifier grain
-                var velocityMessage = new VelocityMessage(message, speed);
+                var velocityMessage = new VelocityMessage(message, speed, PackageCount, DelayPackageCount);
                 await _dispatcher.Post(velocityMessage);
             }
             else
