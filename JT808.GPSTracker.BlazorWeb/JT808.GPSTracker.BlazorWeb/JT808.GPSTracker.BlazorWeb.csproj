@@ -9,7 +9,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\JT808.GPSTracker.Common\JT808.GPSTracker.Common.csproj" />
 		<ProjectReference Include="..\JT808.GPSTracker.BlazorWeb.Client\JT808.GPSTracker.BlazorWeb.Client.csproj" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.5" />
 		<PackageReference Include="Microsoft.Orleans.Client" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Orleans.Clustering.Redis" Version="8.1.0" />
 	</ItemGroup>
